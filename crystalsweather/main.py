@@ -45,9 +45,9 @@ def getplace(lat, lon, api):
         temp1 = temp-273.15
         weath = jsonPlace['weather'][0]['main']
         print('Точная погода получена.')
-        namecity.config(text=f'Город: {nameofcity}')
-        temperature.config(text=f'Погода: {temp1}')
-        weather.config(text=f'Температура: {weath}')
+        namecity.config(text=f'Город (страна): {nameofcity}')
+        temperature.config(text=f'Погода: {weath}')
+        weather.config(text=f'Температура: {temp1} градусов')
         print("Выведено на экран.")
     except requests.exceptions.HTTPError as err:
         messagebox.showerror(title='Произошла ошибка', message='Убедитесь в правильности написания вашего ключа и названия города.')
